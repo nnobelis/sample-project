@@ -1,0 +1,13 @@
+analyzer:
+  package_managers:
+    GradleInspector:
+      options:
+        javaVersion: 25
+  enabled_package_managers:
+  - GradleInspector
+
+excludes:
+  scopes:
+  - pattern: ".*[tT]est.*"
+    reason: "TEST_DEPENDENCY_OF"
+    comment: "Packages for testing only."

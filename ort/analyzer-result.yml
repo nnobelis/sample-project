@@ -1,0 +1,4304 @@
+---
+repository:
+  vcs:
+    type: "Git"
+    url: ""
+    revision: ""
+    path: ""
+  vcs_processed:
+    type: "Git"
+    url: ""
+    revision: ""
+    path: ""
+  config:
+    analyzer:
+      enabled_package_managers:
+      - "GradleInspector"
+      package_managers:
+        GradleInspector:
+          options:
+            javaVersion: "25"
+    excludes:
+      scopes:
+      - pattern: ".*[tT]est.*"
+        reason: "TEST_DEPENDENCY_OF"
+        comment: "Packages for testing only."
+analyzer:
+  start_time: "2026-06-12T12:19:31.364223326Z"
+  end_time: "2026-06-12T12:20:10.002249695Z"
+  environment:
+    ort_version: "89.0.0-065.sha.7d8eade"
+    build_jdk: "25.0.3+9-LTS"
+    java_version: "25.0.3"
+    os: "Linux"
+    processors: 16
+    max_memory: 8334082048
+    variables:
+      HOME: "/home/nino"
+      SHELL: "/bin/bash"
+      TERM: "xterm-256color"
+  config:
+    allow_dynamic_versions: true
+    enabled_package_managers:
+    - "GradleInspector"
+    package_managers:
+      Conan:
+        options:
+          useConan2: "false"
+      GradleInspector:
+        options:
+          javaVersion: "25"
+          javaHome: "/usr/lib/jvm/temurin-21-jdk-amd64/"
+    skip_excluded: false
+  result:
+    projects:
+    - id: "Gradle::Sample_Project:"
+      definition_file_path: "settings.gradle.kts"
+      declared_licenses: []
+      declared_licenses_processed: {}
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: ""
+        revision: ""
+        path: ""
+      homepage_url: ""
+      scope_names: []
+    - id: "Gradle::buildSrc:"
+      definition_file_path: "buildSrc/build.gradle.kts"
+      declared_licenses: []
+      declared_licenses_processed: {}
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: ""
+        revision: ""
+        path: "buildSrc"
+      homepage_url: ""
+      scope_names:
+      - "compileClasspath"
+      - "compilePluginsBlocksPluginClasspathElements"
+      - "embeddedKotlin"
+      - "kotlinBuildToolsApiClasspath"
+      - "kotlinCompilerClasspath"
+      - "kotlinCompilerPluginClasspathMain"
+      - "kotlinCompilerPluginClasspathTest"
+      - "kotlinInternalAbiValidation"
+      - "kotlinKlibCommonizerClasspath"
+      - "precompiledScriptPluginAccessorsGenerationClasspath"
+      - "runtimeClasspath"
+      - "testCompileClasspath"
+      - "testRuntimeClasspath"
+    - id: "Gradle:Sample_Project:app:"
+      definition_file_path: "app/build.gradle.kts"
+      declared_licenses: []
+      declared_licenses_processed: {}
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: ""
+        revision: ""
+        path: "app"
+      homepage_url: ""
+      scope_names:
+      - "compileClasspath"
+      - "kotlinBuildToolsApiClasspath"
+      - "kotlinCompilerClasspath"
+      - "kotlinCompilerPluginClasspathMain"
+      - "kotlinCompilerPluginClasspathTest"
+      - "kotlinInternalAbiValidation"
+      - "kotlinKlibCommonizerClasspath"
+      - "runtimeClasspath"
+      - "testCompileClasspath"
+      - "testRuntimeClasspath"
+    - id: "Gradle:Sample_Project:utils:"
+      definition_file_path: "utils/build.gradle.kts"
+      declared_licenses: []
+      declared_licenses_processed: {}
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: ""
+        revision: ""
+        path: "utils"
+      homepage_url: ""
+      scope_names:
+      - "compileClasspath"
+      - "kotlinBuildToolsApiClasspath"
+      - "kotlinCompilerClasspath"
+      - "kotlinCompilerPluginClasspathMain"
+      - "kotlinCompilerPluginClasspathTest"
+      - "kotlinInternalAbiValidation"
+      - "kotlinKlibCommonizerClasspath"
+      - "runtimeClasspath"
+      - "testCompileClasspath"
+      - "testRuntimeClasspath"
+    packages:
+    - id: "Maven:com.google.code.gson:gson:2.11.0"
+      purl: "pkg:maven/com.google.code.gson/gson@2.11.0"
+      authors:
+      - "Google"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Gson JSON library"
+      homepage_url: "https://github.com/google/gson"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/com/google/code/gson/gson/2.11.0/gson-2.11.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/com/google/code/gson/gson/2.11.0/gson-2.11.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/google/gson.git"
+        revision: "gson-parent-2.11.0"
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/google/gson.git"
+        revision: "gson-parent-2.11.0"
+        path: ""
+    - id: "Maven:com.google.errorprone:error_prone_annotations:2.27.0"
+      purl: "pkg:maven/com.google.errorprone/error_prone_annotations@2.27.0"
+      authors:
+      - "Eddie Aftandilian"
+      - "Google LLC"
+      declared_licenses:
+      - "Apache 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          Apache 2.0: "Apache-2.0"
+      description: "Error Prone is a static analysis tool for Java that catches common\
+        \ programming mistakes at compile-time."
+      homepage_url: "https://errorprone.info/error_prone_annotations"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/google/error-prone.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/google/error-prone.git"
+        revision: ""
+        path: ""
+    - id: "Maven:io.github.java-diff-utils:java-diff-utils:4.12"
+      purl: "pkg:maven/io.github.java-diff-utils/java-diff-utils@4.12"
+      authors:
+      - "Tobias Warneke"
+      - "java-diff-utils"
+      declared_licenses:
+      - "The Apache Software License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          The Apache Software License, Version 2.0: "Apache-2.0"
+      description: "The DiffUtils library for computing diffs, applying patches, generationg\
+        \ side-by-side view in Java."
+      homepage_url: "https://github.com/java-diff-utils/java-diff-utils/java-diff-utils"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/github/java-diff-utils/java-diff-utils/4.12/java-diff-utils-4.12.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/github/java-diff-utils/java-diff-utils/4.12/java-diff-utils-4.12-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/java-diff-utils/java-diff-utils.git"
+        revision: "java-diff-utils-parent-4.12"
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/java-diff-utils/java-diff-utils.git"
+        revision: "java-diff-utils-parent-4.12"
+        path: ""
+    - id: "Maven:io.ktor:ktor-client-core:3.5.0"
+      purl: "pkg:maven/io.ktor/ktor-client-core@3.5.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "The Apache Software License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          The Apache Software License, Version 2.0: "Apache-2.0"
+      description: "Ktor is a framework for quickly creating web applications in Kotlin\
+        \ with minimal effort."
+      homepage_url: "https://github.com/ktorio/ktor"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-client-core/3.5.0/ktor-client-core-3.5.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-client-core/3.5.0/ktor-client-core-3.5.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/ktorio/ktor.git"
+        revision: ""
+        path: ""
+    - id: "Maven:io.ktor:ktor-client-core-jvm:3.5.0"
+      purl: "pkg:maven/io.ktor/ktor-client-core-jvm@3.5.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "The Apache Software License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          The Apache Software License, Version 2.0: "Apache-2.0"
+      description: "Ktor is a framework for quickly creating web applications in Kotlin\
+        \ with minimal effort."
+      homepage_url: "https://github.com/ktorio/ktor"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-client-core-jvm/3.5.0/ktor-client-core-jvm-3.5.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-client-core-jvm/3.5.0/ktor-client-core-jvm-3.5.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/ktorio/ktor.git"
+        revision: ""
+        path: ""
+    - id: "Maven:io.ktor:ktor-events:3.5.0"
+      purl: "pkg:maven/io.ktor/ktor-events@3.5.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "The Apache Software License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          The Apache Software License, Version 2.0: "Apache-2.0"
+      description: "Ktor is a framework for quickly creating web applications in Kotlin\
+        \ with minimal effort."
+      homepage_url: "https://github.com/ktorio/ktor"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-events/3.5.0/ktor-events-3.5.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-events/3.5.0/ktor-events-3.5.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/ktorio/ktor.git"
+        revision: ""
+        path: ""
+    - id: "Maven:io.ktor:ktor-events-jvm:3.5.0"
+      purl: "pkg:maven/io.ktor/ktor-events-jvm@3.5.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "The Apache Software License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          The Apache Software License, Version 2.0: "Apache-2.0"
+      description: "Ktor is a framework for quickly creating web applications in Kotlin\
+        \ with minimal effort."
+      homepage_url: "https://github.com/ktorio/ktor"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-events-jvm/3.5.0/ktor-events-jvm-3.5.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-events-jvm/3.5.0/ktor-events-jvm-3.5.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/ktorio/ktor.git"
+        revision: ""
+        path: ""
+    - id: "Maven:io.ktor:ktor-http:3.5.0"
+      purl: "pkg:maven/io.ktor/ktor-http@3.5.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "The Apache Software License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          The Apache Software License, Version 2.0: "Apache-2.0"
+      description: "Ktor is a framework for quickly creating web applications in Kotlin\
+        \ with minimal effort."
+      homepage_url: "https://github.com/ktorio/ktor"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-http/3.5.0/ktor-http-3.5.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-http/3.5.0/ktor-http-3.5.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/ktorio/ktor.git"
+        revision: ""
+        path: ""
+    - id: "Maven:io.ktor:ktor-http-cio:3.5.0"
+      purl: "pkg:maven/io.ktor/ktor-http-cio@3.5.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "The Apache Software License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          The Apache Software License, Version 2.0: "Apache-2.0"
+      description: "Ktor is a framework for quickly creating web applications in Kotlin\
+        \ with minimal effort."
+      homepage_url: "https://github.com/ktorio/ktor"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-http-cio/3.5.0/ktor-http-cio-3.5.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-http-cio/3.5.0/ktor-http-cio-3.5.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/ktorio/ktor.git"
+        revision: ""
+        path: ""
+    - id: "Maven:io.ktor:ktor-http-cio-jvm:3.5.0"
+      purl: "pkg:maven/io.ktor/ktor-http-cio-jvm@3.5.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "The Apache Software License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          The Apache Software License, Version 2.0: "Apache-2.0"
+      description: "Ktor is a framework for quickly creating web applications in Kotlin\
+        \ with minimal effort."
+      homepage_url: "https://github.com/ktorio/ktor"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-http-cio-jvm/3.5.0/ktor-http-cio-jvm-3.5.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-http-cio-jvm/3.5.0/ktor-http-cio-jvm-3.5.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/ktorio/ktor.git"
+        revision: ""
+        path: ""
+    - id: "Maven:io.ktor:ktor-http-jvm:3.5.0"
+      purl: "pkg:maven/io.ktor/ktor-http-jvm@3.5.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "The Apache Software License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          The Apache Software License, Version 2.0: "Apache-2.0"
+      description: "Ktor is a framework for quickly creating web applications in Kotlin\
+        \ with minimal effort."
+      homepage_url: "https://github.com/ktorio/ktor"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-http-jvm/3.5.0/ktor-http-jvm-3.5.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-http-jvm/3.5.0/ktor-http-jvm-3.5.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/ktorio/ktor.git"
+        revision: ""
+        path: ""
+    - id: "Maven:io.ktor:ktor-io:3.5.0"
+      purl: "pkg:maven/io.ktor/ktor-io@3.5.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "The Apache Software License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          The Apache Software License, Version 2.0: "Apache-2.0"
+      description: "Ktor is a framework for quickly creating web applications in Kotlin\
+        \ with minimal effort."
+      homepage_url: "https://github.com/ktorio/ktor"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-io/3.5.0/ktor-io-3.5.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-io/3.5.0/ktor-io-3.5.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/ktorio/ktor.git"
+        revision: ""
+        path: ""
+    - id: "Maven:io.ktor:ktor-io-jvm:3.5.0"
+      purl: "pkg:maven/io.ktor/ktor-io-jvm@3.5.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "The Apache Software License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          The Apache Software License, Version 2.0: "Apache-2.0"
+      description: "Ktor is a framework for quickly creating web applications in Kotlin\
+        \ with minimal effort."
+      homepage_url: "https://github.com/ktorio/ktor"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-io-jvm/3.5.0/ktor-io-jvm-3.5.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-io-jvm/3.5.0/ktor-io-jvm-3.5.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/ktorio/ktor.git"
+        revision: ""
+        path: ""
+    - id: "Maven:io.ktor:ktor-network:3.5.0"
+      purl: "pkg:maven/io.ktor/ktor-network@3.5.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "The Apache Software License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          The Apache Software License, Version 2.0: "Apache-2.0"
+      description: "Ktor is a framework for quickly creating web applications in Kotlin\
+        \ with minimal effort."
+      homepage_url: "https://github.com/ktorio/ktor"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-network/3.5.0/ktor-network-3.5.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-network/3.5.0/ktor-network-3.5.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/ktorio/ktor.git"
+        revision: ""
+        path: ""
+    - id: "Maven:io.ktor:ktor-network-jvm:3.5.0"
+      purl: "pkg:maven/io.ktor/ktor-network-jvm@3.5.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "The Apache Software License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          The Apache Software License, Version 2.0: "Apache-2.0"
+      description: "Ktor is a framework for quickly creating web applications in Kotlin\
+        \ with minimal effort."
+      homepage_url: "https://github.com/ktorio/ktor"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-network-jvm/3.5.0/ktor-network-jvm-3.5.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-network-jvm/3.5.0/ktor-network-jvm-3.5.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/ktorio/ktor.git"
+        revision: ""
+        path: ""
+    - id: "Maven:io.ktor:ktor-serialization:3.5.0"
+      purl: "pkg:maven/io.ktor/ktor-serialization@3.5.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "The Apache Software License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          The Apache Software License, Version 2.0: "Apache-2.0"
+      description: "Ktor is a framework for quickly creating web applications in Kotlin\
+        \ with minimal effort."
+      homepage_url: "https://github.com/ktorio/ktor"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-serialization/3.5.0/ktor-serialization-3.5.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-serialization/3.5.0/ktor-serialization-3.5.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/ktorio/ktor.git"
+        revision: ""
+        path: ""
+    - id: "Maven:io.ktor:ktor-serialization-jvm:3.5.0"
+      purl: "pkg:maven/io.ktor/ktor-serialization-jvm@3.5.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "The Apache Software License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          The Apache Software License, Version 2.0: "Apache-2.0"
+      description: "Ktor is a framework for quickly creating web applications in Kotlin\
+        \ with minimal effort."
+      homepage_url: "https://github.com/ktorio/ktor"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-serialization-jvm/3.5.0/ktor-serialization-jvm-3.5.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-serialization-jvm/3.5.0/ktor-serialization-jvm-3.5.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/ktorio/ktor.git"
+        revision: ""
+        path: ""
+    - id: "Maven:io.ktor:ktor-sse:3.5.0"
+      purl: "pkg:maven/io.ktor/ktor-sse@3.5.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "The Apache Software License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          The Apache Software License, Version 2.0: "Apache-2.0"
+      description: "Ktor is a framework for quickly creating web applications in Kotlin\
+        \ with minimal effort."
+      homepage_url: "https://github.com/ktorio/ktor"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-sse/3.5.0/ktor-sse-3.5.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-sse/3.5.0/ktor-sse-3.5.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/ktorio/ktor.git"
+        revision: ""
+        path: ""
+    - id: "Maven:io.ktor:ktor-sse-jvm:3.5.0"
+      purl: "pkg:maven/io.ktor/ktor-sse-jvm@3.5.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "The Apache Software License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          The Apache Software License, Version 2.0: "Apache-2.0"
+      description: "Ktor is a framework for quickly creating web applications in Kotlin\
+        \ with minimal effort."
+      homepage_url: "https://github.com/ktorio/ktor"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-sse-jvm/3.5.0/ktor-sse-jvm-3.5.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-sse-jvm/3.5.0/ktor-sse-jvm-3.5.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/ktorio/ktor.git"
+        revision: ""
+        path: ""
+    - id: "Maven:io.ktor:ktor-utils:3.5.0"
+      purl: "pkg:maven/io.ktor/ktor-utils@3.5.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "The Apache Software License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          The Apache Software License, Version 2.0: "Apache-2.0"
+      description: "Ktor is a framework for quickly creating web applications in Kotlin\
+        \ with minimal effort."
+      homepage_url: "https://github.com/ktorio/ktor"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-utils/3.5.0/ktor-utils-3.5.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-utils/3.5.0/ktor-utils-3.5.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/ktorio/ktor.git"
+        revision: ""
+        path: ""
+    - id: "Maven:io.ktor:ktor-utils-jvm:3.5.0"
+      purl: "pkg:maven/io.ktor/ktor-utils-jvm@3.5.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "The Apache Software License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          The Apache Software License, Version 2.0: "Apache-2.0"
+      description: "Ktor is a framework for quickly creating web applications in Kotlin\
+        \ with minimal effort."
+      homepage_url: "https://github.com/ktorio/ktor"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-utils-jvm/3.5.0/ktor-utils-jvm-3.5.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-utils-jvm/3.5.0/ktor-utils-jvm-3.5.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/ktorio/ktor.git"
+        revision: ""
+        path: ""
+    - id: "Maven:io.ktor:ktor-websocket-serialization:3.5.0"
+      purl: "pkg:maven/io.ktor/ktor-websocket-serialization@3.5.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "The Apache Software License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          The Apache Software License, Version 2.0: "Apache-2.0"
+      description: "Ktor is a framework for quickly creating web applications in Kotlin\
+        \ with minimal effort."
+      homepage_url: "https://github.com/ktorio/ktor"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-websocket-serialization/3.5.0/ktor-websocket-serialization-3.5.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-websocket-serialization/3.5.0/ktor-websocket-serialization-3.5.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/ktorio/ktor.git"
+        revision: ""
+        path: ""
+    - id: "Maven:io.ktor:ktor-websocket-serialization-jvm:3.5.0"
+      purl: "pkg:maven/io.ktor/ktor-websocket-serialization-jvm@3.5.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "The Apache Software License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          The Apache Software License, Version 2.0: "Apache-2.0"
+      description: "Ktor is a framework for quickly creating web applications in Kotlin\
+        \ with minimal effort."
+      homepage_url: "https://github.com/ktorio/ktor"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-websocket-serialization-jvm/3.5.0/ktor-websocket-serialization-jvm-3.5.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-websocket-serialization-jvm/3.5.0/ktor-websocket-serialization-jvm-3.5.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/ktorio/ktor.git"
+        revision: ""
+        path: ""
+    - id: "Maven:io.ktor:ktor-websockets:3.5.0"
+      purl: "pkg:maven/io.ktor/ktor-websockets@3.5.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "The Apache Software License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          The Apache Software License, Version 2.0: "Apache-2.0"
+      description: "Ktor is a framework for quickly creating web applications in Kotlin\
+        \ with minimal effort."
+      homepage_url: "https://github.com/ktorio/ktor"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-websockets/3.5.0/ktor-websockets-3.5.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-websockets/3.5.0/ktor-websockets-3.5.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/ktorio/ktor.git"
+        revision: ""
+        path: ""
+    - id: "Maven:io.ktor:ktor-websockets-jvm:3.5.0"
+      purl: "pkg:maven/io.ktor/ktor-websockets-jvm@3.5.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "The Apache Software License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          The Apache Software License, Version 2.0: "Apache-2.0"
+      description: "Ktor is a framework for quickly creating web applications in Kotlin\
+        \ with minimal effort."
+      homepage_url: "https://github.com/ktorio/ktor"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-websockets-jvm/3.5.0/ktor-websockets-jvm-3.5.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/io/ktor/ktor-websockets-jvm/3.5.0/ktor-websockets-jvm-3.5.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/ktorio/ktor.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.apiguardian:apiguardian-api:1.1.2"
+      purl: "pkg:maven/org.apiguardian/apiguardian-api@1.1.2"
+      authors:
+      - "@API Guardian Team"
+      declared_licenses:
+      - "The Apache License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          The Apache License, Version 2.0: "Apache-2.0"
+      description: "@API Guardian"
+      homepage_url: "https://github.com/apiguardian-team/apiguardian"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "git://github.com/apiguardian-team/apiguardian.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/apiguardian-team/apiguardian.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains:annotations:13.0"
+      purl: "pkg:maven/org.jetbrains/annotations@13.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "The Apache Software License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          The Apache Software License, Version 2.0: "Apache-2.0"
+      description: "A set of annotations used for code inspection support and code\
+        \ documentation."
+      homepage_url: "http://www.jetbrains.org"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/annotations/13.0/annotations-13.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/annotations/13.0/annotations-13.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/intellij-community.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/intellij-community.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains:annotations:23.0.0"
+      purl: "pkg:maven/org.jetbrains/annotations@23.0.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "The Apache Software License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          The Apache Software License, Version 2.0: "Apache-2.0"
+      description: "A set of annotations used for code inspection support and code\
+        \ documentation."
+      homepage_url: "https://github.com/JetBrains/java-annotations"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/annotations/23.0.0/annotations-23.0.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/annotations/23.0.0/annotations-23.0.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "git://github.com/JetBrains/java-annotations.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/java-annotations.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:abi-tools:2.3.20"
+      purl: "pkg:maven/org.jetbrains.kotlin/abi-tools@2.3.20"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Abi Tools"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/abi-tools/2.3.20/abi-tools-2.3.20.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/abi-tools/2.3.20/abi-tools-2.3.20-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:abi-tools:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/abi-tools@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Abi Tools"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/abi-tools/2.3.21/abi-tools-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/abi-tools/2.3.21/abi-tools-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:abi-tools-api:2.3.20"
+      purl: "pkg:maven/org.jetbrains.kotlin/abi-tools-api@2.3.20"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Abi Tools Api"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/abi-tools-api/2.3.20/abi-tools-api-2.3.20.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/abi-tools-api/2.3.20/abi-tools-api-2.3.20-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:abi-tools-api:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/abi-tools-api@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Abi Tools Api"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/abi-tools-api/2.3.21/abi-tools-api-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/abi-tools-api/2.3.21/abi-tools-api-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:fus-statistics-gradle-plugin:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/fus-statistics-gradle-plugin@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Fus Statistics Gradle Plugin"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/fus-statistics-gradle-plugin/2.3.21/fus-statistics-gradle-plugin-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/fus-statistics-gradle-plugin/2.3.21/fus-statistics-gradle-plugin-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-assignment-compiler-plugin-embeddable:2.3.20"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-assignment-compiler-plugin-embeddable@2.3.20"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Assignment Compiler Plugin (Embeddable)"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-assignment-compiler-plugin-embeddable/2.3.20/kotlin-assignment-compiler-plugin-embeddable-2.3.20.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-assignment-compiler-plugin-embeddable/2.3.20/kotlin-assignment-compiler-plugin-embeddable-2.3.20-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-build-statistics:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-build-statistics@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Build Report Common"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-build-statistics/2.3.21/kotlin-build-statistics-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-build-statistics/2.3.21/kotlin-build-statistics-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-build-tools-api:2.3.20"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-build-tools-api@2.3.20"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Build Tools Api"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-build-tools-api/2.3.20/kotlin-build-tools-api-2.3.20.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-build-tools-api/2.3.20/kotlin-build-tools-api-2.3.20-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-build-tools-api:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-build-tools-api@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Build Tools Api"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-build-tools-api/2.3.21/kotlin-build-tools-api-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-build-tools-api/2.3.21/kotlin-build-tools-api-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-build-tools-compat:2.3.20"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-build-tools-compat@2.3.20"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Build Tools Compat"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-build-tools-compat/2.3.20/kotlin-build-tools-compat-2.3.20.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-build-tools-compat/2.3.20/kotlin-build-tools-compat-2.3.20-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-build-tools-compat:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-build-tools-compat@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Build Tools Compat"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-build-tools-compat/2.3.21/kotlin-build-tools-compat-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-build-tools-compat/2.3.21/kotlin-build-tools-compat-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-build-tools-cri-impl:2.3.20"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-build-tools-cri-impl@2.3.20"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Build Tools Cri Impl"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-build-tools-cri-impl/2.3.20/kotlin-build-tools-cri-impl-2.3.20.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-build-tools-cri-impl/2.3.20/kotlin-build-tools-cri-impl-2.3.20-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-build-tools-cri-impl:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-build-tools-cri-impl@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Build Tools Cri Impl"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-build-tools-cri-impl/2.3.21/kotlin-build-tools-cri-impl-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-build-tools-cri-impl/2.3.21/kotlin-build-tools-cri-impl-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-build-tools-impl:2.3.20"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-build-tools-impl@2.3.20"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Build Tools Impl"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-build-tools-impl/2.3.20/kotlin-build-tools-impl-2.3.20.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-build-tools-impl/2.3.20/kotlin-build-tools-impl-2.3.20-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-build-tools-impl:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-build-tools-impl@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Build Tools Impl"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-build-tools-impl/2.3.21/kotlin-build-tools-impl-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-build-tools-impl/2.3.21/kotlin-build-tools-impl-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-compiler-embeddable:2.3.20"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-compiler-embeddable@2.3.20"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Compiler (embeddable)"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.3.20/kotlin-compiler-embeddable-2.3.20.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.3.20/kotlin-compiler-embeddable-2.3.20-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-compiler-embeddable:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-compiler-embeddable@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Compiler (embeddable)"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.3.21/kotlin-compiler-embeddable-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.3.21/kotlin-compiler-embeddable-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-compiler-runner:2.3.20"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-compiler-runner@2.3.20"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Compiler runner + daemon client"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-compiler-runner/2.3.20/kotlin-compiler-runner-2.3.20.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-compiler-runner/2.3.20/kotlin-compiler-runner-2.3.20-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-compiler-runner:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-compiler-runner@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Compiler runner + daemon client"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-compiler-runner/2.3.21/kotlin-compiler-runner-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-compiler-runner/2.3.21/kotlin-compiler-runner-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-daemon-client:2.3.20"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-daemon-client@2.3.20"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Daemon Client"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-daemon-client/2.3.20/kotlin-daemon-client-2.3.20.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-daemon-client/2.3.20/kotlin-daemon-client-2.3.20-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-daemon-client:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-daemon-client@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Daemon Client"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-daemon-client/2.3.21/kotlin-daemon-client-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-daemon-client/2.3.21/kotlin-daemon-client-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-daemon-embeddable:2.3.20"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-daemon-embeddable@2.3.20"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Daemon (for using with embeddable compiler)"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-daemon-embeddable/2.3.20/kotlin-daemon-embeddable-2.3.20.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-daemon-embeddable/2.3.20/kotlin-daemon-embeddable-2.3.20-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-daemon-embeddable:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-daemon-embeddable@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Daemon (for using with embeddable compiler)"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-daemon-embeddable/2.3.21/kotlin-daemon-embeddable-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-daemon-embeddable/2.3.21/kotlin-daemon-embeddable-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-gradle-plugin:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-gradle-plugin@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Gradle Plugin"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-gradle-plugin/2.3.21/kotlin-gradle-plugin-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-gradle-plugin/2.3.21/kotlin-gradle-plugin-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-gradle-plugin-annotations:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-gradle-plugin-annotations@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Gradle Plugin Annotations"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-gradle-plugin-annotations/2.3.21/kotlin-gradle-plugin-annotations-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-gradle-plugin-annotations/2.3.21/kotlin-gradle-plugin-annotations-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-gradle-plugin-api:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-gradle-plugin-api@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Gradle Plugin Api"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-gradle-plugin-api/2.3.21/kotlin-gradle-plugin-api-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-gradle-plugin-api/2.3.21/kotlin-gradle-plugin-api-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-gradle-plugin-idea:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-gradle-plugin-idea@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Gradle Plugin Idea"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-gradle-plugin-idea/2.3.21/kotlin-gradle-plugin-idea-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-gradle-plugin-idea/2.3.21/kotlin-gradle-plugin-idea-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-gradle-plugin-idea-proto:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-gradle-plugin-idea-proto@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Gradle Plugin Idea Proto"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-gradle-plugin-idea-proto/2.3.21/kotlin-gradle-plugin-idea-proto-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-gradle-plugin-idea-proto/2.3.21/kotlin-gradle-plugin-idea-proto-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-gradle-plugins-bom:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-gradle-plugins-bom@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Gradle Plugins Bom"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-gradle-plugins-bom/2.3.21/kotlin-gradle-plugins-bom-2.3.21.pom"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-gradle-plugins-bom/2.3.21/kotlin-gradle-plugins-bom-2.3.21.pom"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      is_metadata_only: true
+    - id: "Maven:org.jetbrains.kotlin:kotlin-klib-abi-reader:2.3.20"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-klib-abi-reader@2.3.20"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "KLIB ABI reader"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-klib-abi-reader/2.3.20/kotlin-klib-abi-reader-2.3.20.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-klib-abi-reader/2.3.20/kotlin-klib-abi-reader-2.3.20-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-klib-abi-reader:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-klib-abi-reader@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "KLIB ABI reader"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-klib-abi-reader/2.3.21/kotlin-klib-abi-reader-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-klib-abi-reader/2.3.21/kotlin-klib-abi-reader-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-klib-commonizer-api:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-klib-commonizer-api@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin KLIB Library Commonizer API"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-klib-commonizer-api/2.3.21/kotlin-klib-commonizer-api-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-klib-commonizer-api/2.3.21/kotlin-klib-commonizer-api-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-klib-commonizer-embeddable:2.3.20"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-klib-commonizer-embeddable@2.3.20"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin KLIB Library Commonizer (for using with embeddable compiler)"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-klib-commonizer-embeddable/2.3.20/kotlin-klib-commonizer-embeddable-2.3.20.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-klib-commonizer-embeddable/2.3.20/kotlin-klib-commonizer-embeddable-2.3.20-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-klib-commonizer-embeddable:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-klib-commonizer-embeddable@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin KLIB Library Commonizer (for using with embeddable compiler)"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-klib-commonizer-embeddable/2.3.21/kotlin-klib-commonizer-embeddable-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-klib-commonizer-embeddable/2.3.21/kotlin-klib-commonizer-embeddable-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-metadata-jvm:2.3.20"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-metadata-jvm@2.3.20"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin JVM metadata manipulation library"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-metadata-jvm/2.3.20/kotlin-metadata-jvm-2.3.20.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-metadata-jvm/2.3.20/kotlin-metadata-jvm-2.3.20-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-metadata-jvm:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-metadata-jvm@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin JVM metadata manipulation library"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-metadata-jvm/2.3.21/kotlin-metadata-jvm-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-metadata-jvm/2.3.21/kotlin-metadata-jvm-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-native-utils:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-native-utils@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin/Native utils"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-native-utils/2.3.21/kotlin-native-utils-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-native-utils/2.3.21/kotlin-native-utils-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-reflect:1.6.10"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-reflect@1.6.10"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "The Apache License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          The Apache License, Version 2.0: "Apache-2.0"
+      description: "Kotlin Full Reflection Library"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-reflect/1.6.10/kotlin-reflect-1.6.10.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-reflect/1.6.10/kotlin-reflect-1.6.10-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-reflect:2.3.20"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-reflect@2.3.20"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Full Reflection Library"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-reflect/2.3.20/kotlin-reflect-2.3.20.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-reflect/2.3.20/kotlin-reflect-2.3.20-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-sam-with-receiver-compiler-plugin-embeddable:2.3.20"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-sam-with-receiver-compiler-plugin-embeddable@2.3.20"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Sam With Receiver Compiler Plugin.embeddable"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-sam-with-receiver-compiler-plugin-embeddable/2.3.20/kotlin-sam-with-receiver-compiler-plugin-embeddable-2.3.20.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-sam-with-receiver-compiler-plugin-embeddable/2.3.20/kotlin-sam-with-receiver-compiler-plugin-embeddable-2.3.20-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-script-runtime:2.3.20"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-script-runtime@2.3.20"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Script Runtime"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-script-runtime/2.3.20/kotlin-script-runtime-2.3.20.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-script-runtime/2.3.20/kotlin-script-runtime-2.3.20-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-script-runtime:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-script-runtime@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Script Runtime"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-script-runtime/2.3.21/kotlin-script-runtime-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-script-runtime/2.3.21/kotlin-script-runtime-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-scripting-common:2.3.20"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-scripting-common@2.3.20"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Scripting Common"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-scripting-common/2.3.20/kotlin-scripting-common-2.3.20.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-scripting-common/2.3.20/kotlin-scripting-common-2.3.20-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-scripting-common:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-scripting-common@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Scripting Common"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-scripting-common/2.3.21/kotlin-scripting-common-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-scripting-common/2.3.21/kotlin-scripting-common-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:2.3.20"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-scripting-compiler-embeddable@2.3.20"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Scripting Compiler Plugin for embeddable compiler"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-scripting-compiler-embeddable/2.3.20/kotlin-scripting-compiler-embeddable-2.3.20.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-scripting-compiler-embeddable/2.3.20/kotlin-scripting-compiler-embeddable-2.3.20-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-scripting-compiler-embeddable@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Scripting Compiler Plugin for embeddable compiler"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-scripting-compiler-embeddable/2.3.21/kotlin-scripting-compiler-embeddable-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-scripting-compiler-embeddable/2.3.21/kotlin-scripting-compiler-embeddable-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable:2.3.20"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-scripting-compiler-impl-embeddable@2.3.20"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Compiler Infrastructure for Scripting for embeddable compiler"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-scripting-compiler-impl-embeddable/2.3.20/kotlin-scripting-compiler-impl-embeddable-2.3.20.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-scripting-compiler-impl-embeddable/2.3.20/kotlin-scripting-compiler-impl-embeddable-2.3.20-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-scripting-compiler-impl-embeddable@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Compiler Infrastructure for Scripting for embeddable compiler"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-scripting-compiler-impl-embeddable/2.3.21/kotlin-scripting-compiler-impl-embeddable-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-scripting-compiler-impl-embeddable/2.3.21/kotlin-scripting-compiler-impl-embeddable-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-scripting-jvm:2.3.20"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-scripting-jvm@2.3.20"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Scripting Jvm"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-scripting-jvm/2.3.20/kotlin-scripting-jvm-2.3.20.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-scripting-jvm/2.3.20/kotlin-scripting-jvm-2.3.20-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-scripting-jvm:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-scripting-jvm@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Scripting Jvm"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-scripting-jvm/2.3.21/kotlin-scripting-jvm-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-scripting-jvm/2.3.21/kotlin-scripting-jvm-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-serialization-compiler-plugin-embeddable:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-serialization-compiler-plugin-embeddable@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlinx Serialization Compiler Plugin.embeddable"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-serialization-compiler-plugin-embeddable/2.3.21/kotlin-serialization-compiler-plugin-embeddable-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-serialization-compiler-plugin-embeddable/2.3.21/kotlin-serialization-compiler-plugin-embeddable-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-stdlib:2.3.20"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.3.20"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Standard Library"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-stdlib/2.3.20/kotlin-stdlib-2.3.20.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-stdlib/2.3.20/kotlin-stdlib-2.3.20-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-stdlib:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Standard Library"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-stdlib/2.3.21/kotlin-stdlib-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-stdlib/2.3.21/kotlin-stdlib-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-test:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-test@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Test Multiplatform library"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-test/2.3.21/kotlin-test-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-test/2.3.21/kotlin-test-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-test-junit5:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-test-junit5@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Test library support for JUnit5"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-test-junit5/2.3.21/kotlin-test-junit5-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-test-junit5/2.3.21/kotlin-test-junit5-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-tooling-core:2.3.20"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-tooling-core@2.3.20"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Tooling Core"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-tooling-core/2.3.20/kotlin-tooling-core-2.3.20.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-tooling-core/2.3.20/kotlin-tooling-core-2.3.20-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-tooling-core:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-tooling-core@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Tooling Core"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-tooling-core/2.3.21/kotlin-tooling-core-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-tooling-core/2.3.21/kotlin-tooling-core-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-util-io:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-util-io@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Util Io"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-util-io/2.3.21/kotlin-util-io-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-util-io/2.3.21/kotlin-util-io-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-util-klib:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-util-klib@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Common klib reader and writer"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-util-klib/2.3.21/kotlin-util-klib-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-util-klib/2.3.21/kotlin-util-klib-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlin:kotlin-util-klib-metadata:2.3.21"
+      purl: "pkg:maven/org.jetbrains.kotlin/kotlin-util-klib-metadata@2.3.21"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Common klib metadata reader and writer"
+      homepage_url: "https://kotlinlang.org/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-util-klib-metadata/2.3.21/kotlin-util-klib-metadata-2.3.21.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlin/kotlin-util-klib-metadata/2.3.21/kotlin-util-klib-metadata-2.3.21-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/JetBrains/kotlin.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.11.0"
+      purl: "pkg:maven/org.jetbrains.kotlinx/kotlinx-coroutines-bom@1.11.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Coroutines support libraries for Kotlin"
+      homepage_url: "https://github.com/Kotlin/kotlinx.coroutines"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlinx/kotlinx-coroutines-bom/1.11.0/kotlinx-coroutines-bom-1.11.0.pom"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlinx/kotlinx-coroutines-bom/1.11.0/kotlinx-coroutines-bom-1.11.0.pom"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/Kotlin/kotlinx.coroutines.git"
+        revision: ""
+        path: ""
+      is_metadata_only: true
+    - id: "Maven:org.jetbrains.kotlinx:kotlinx-coroutines-core:1.11.0"
+      purl: "pkg:maven/org.jetbrains.kotlinx/kotlinx-coroutines-core@1.11.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Coroutines support libraries for Kotlin"
+      homepage_url: "https://github.com/Kotlin/kotlinx.coroutines"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlinx/kotlinx-coroutines-core/1.11.0/kotlinx-coroutines-core-1.11.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlinx/kotlinx-coroutines-core/1.11.0/kotlinx-coroutines-core-1.11.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/Kotlin/kotlinx.coroutines.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.0"
+      purl: "pkg:maven/org.jetbrains.kotlinx/kotlinx-coroutines-core-jvm@1.8.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "The Apache Software License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          The Apache Software License, Version 2.0: "Apache-2.0"
+      description: "Coroutines support libraries for Kotlin"
+      homepage_url: "https://github.com/Kotlin/kotlinx.coroutines"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/Kotlin/kotlinx.coroutines.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.11.0"
+      purl: "pkg:maven/org.jetbrains.kotlinx/kotlinx-coroutines-core-jvm@1.11.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Coroutines support libraries for Kotlin"
+      homepage_url: "https://github.com/Kotlin/kotlinx.coroutines"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.11.0/kotlinx-coroutines-core-jvm-1.11.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.11.0/kotlinx-coroutines-core-jvm-1.11.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/Kotlin/kotlinx.coroutines.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlinx:kotlinx-datetime:0.7.1"
+      purl: "pkg:maven/org.jetbrains.kotlinx/kotlinx-datetime@0.7.1"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Datetime Library"
+      homepage_url: "https://github.com/Kotlin/kotlinx-datetime"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlinx/kotlinx-datetime/0.7.1/kotlinx-datetime-0.7.1.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlinx/kotlinx-datetime/0.7.1/kotlinx-datetime-0.7.1-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/Kotlin/kotlinx-datetime.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlinx:kotlinx-datetime-jvm:0.7.1"
+      purl: "pkg:maven/org.jetbrains.kotlinx/kotlinx-datetime-jvm@0.7.1"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin Datetime Library"
+      homepage_url: "https://github.com/Kotlin/kotlinx-datetime"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlinx/kotlinx-datetime-jvm/0.7.1/kotlinx-datetime-jvm-0.7.1.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlinx/kotlinx-datetime-jvm/0.7.1/kotlinx-datetime-jvm-0.7.1-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/Kotlin/kotlinx-datetime.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlinx:kotlinx-io-bytestring:0.9.0"
+      purl: "pkg:maven/org.jetbrains.kotlinx/kotlinx-io-bytestring@0.9.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "IO support for Kotlin"
+      homepage_url: "https://github.com/Kotlin/kotlinx-io"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlinx/kotlinx-io-bytestring/0.9.0/kotlinx-io-bytestring-0.9.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlinx/kotlinx-io-bytestring/0.9.0/kotlinx-io-bytestring-0.9.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/Kotlin/kotlinx-io.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlinx:kotlinx-io-bytestring-jvm:0.9.0"
+      purl: "pkg:maven/org.jetbrains.kotlinx/kotlinx-io-bytestring-jvm@0.9.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "IO support for Kotlin"
+      homepage_url: "https://github.com/Kotlin/kotlinx-io"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlinx/kotlinx-io-bytestring-jvm/0.9.0/kotlinx-io-bytestring-jvm-0.9.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlinx/kotlinx-io-bytestring-jvm/0.9.0/kotlinx-io-bytestring-jvm-0.9.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/Kotlin/kotlinx-io.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlinx:kotlinx-io-core:0.9.0"
+      purl: "pkg:maven/org.jetbrains.kotlinx/kotlinx-io-core@0.9.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "IO support for Kotlin"
+      homepage_url: "https://github.com/Kotlin/kotlinx-io"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlinx/kotlinx-io-core/0.9.0/kotlinx-io-core-0.9.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlinx/kotlinx-io-core/0.9.0/kotlinx-io-core-0.9.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/Kotlin/kotlinx-io.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlinx:kotlinx-io-core-jvm:0.9.0"
+      purl: "pkg:maven/org.jetbrains.kotlinx/kotlinx-io-core-jvm@0.9.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "IO support for Kotlin"
+      homepage_url: "https://github.com/Kotlin/kotlinx-io"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlinx/kotlinx-io-core-jvm/0.9.0/kotlinx-io-core-jvm-0.9.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlinx/kotlinx-io-core-jvm/0.9.0/kotlinx-io-core-jvm-0.9.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/Kotlin/kotlinx-io.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlinx:kotlinx-serialization-bom:1.11.0"
+      purl: "pkg:maven/org.jetbrains.kotlinx/kotlinx-serialization-bom@1.11.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin multiplatform serialization runtime library"
+      homepage_url: "https://github.com/Kotlin/kotlinx.serialization"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlinx/kotlinx-serialization-bom/1.11.0/kotlinx-serialization-bom-1.11.0.pom"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlinx/kotlinx-serialization-bom/1.11.0/kotlinx-serialization-bom-1.11.0.pom"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/Kotlin/kotlinx.serialization.git"
+        revision: ""
+        path: ""
+      is_metadata_only: true
+    - id: "Maven:org.jetbrains.kotlinx:kotlinx-serialization-core:1.11.0"
+      purl: "pkg:maven/org.jetbrains.kotlinx/kotlinx-serialization-core@1.11.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin multiplatform serialization runtime library"
+      homepage_url: "https://github.com/Kotlin/kotlinx.serialization"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlinx/kotlinx-serialization-core/1.11.0/kotlinx-serialization-core-1.11.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlinx/kotlinx-serialization-core/1.11.0/kotlinx-serialization-core-1.11.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/Kotlin/kotlinx.serialization.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.11.0"
+      purl: "pkg:maven/org.jetbrains.kotlinx/kotlinx-serialization-core-jvm@1.11.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin multiplatform serialization runtime library"
+      homepage_url: "https://github.com/Kotlin/kotlinx.serialization"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlinx/kotlinx-serialization-core-jvm/1.11.0/kotlinx-serialization-core-jvm-1.11.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlinx/kotlinx-serialization-core-jvm/1.11.0/kotlinx-serialization-core-jvm-1.11.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/Kotlin/kotlinx.serialization.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlinx:kotlinx-serialization-json:1.11.0"
+      purl: "pkg:maven/org.jetbrains.kotlinx/kotlinx-serialization-json@1.11.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin multiplatform serialization runtime library"
+      homepage_url: "https://github.com/Kotlin/kotlinx.serialization"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlinx/kotlinx-serialization-json/1.11.0/kotlinx-serialization-json-1.11.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlinx/kotlinx-serialization-json/1.11.0/kotlinx-serialization-json-1.11.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/Kotlin/kotlinx.serialization.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.11.0"
+      purl: "pkg:maven/org.jetbrains.kotlinx/kotlinx-serialization-json-jvm@1.11.0"
+      authors:
+      - "JetBrains"
+      declared_licenses:
+      - "Apache-2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+      description: "Kotlin multiplatform serialization runtime library"
+      homepage_url: "https://github.com/Kotlin/kotlinx.serialization"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlinx/kotlinx-serialization-json-jvm/1.11.0/kotlinx-serialization-json-jvm-1.11.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/jetbrains/kotlinx/kotlinx-serialization-json-jvm/1.11.0/kotlinx-serialization-json-jvm-1.11.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/Kotlin/kotlinx.serialization.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.junit:junit-bom:5.10.1"
+      purl: "pkg:maven/org.junit/junit-bom@5.10.1"
+      authors:
+      - "Christian Stein"
+      - "Johannes Link"
+      - "Juliette de Rancourt"
+      - "Marc Philipp"
+      - "Matthias Merdes"
+      - "Sam Brannen"
+      - "Stefan Bechtold"
+      declared_licenses:
+      - "Eclipse Public License v2.0"
+      declared_licenses_processed:
+        spdx_expression: "EPL-2.0"
+        mapped:
+          Eclipse Public License v2.0: "EPL-2.0"
+      description: "This Bill of Materials POM can be used to ease dependency management\
+        \ when referencing multiple JUnit artifacts using Gradle or Maven."
+      homepage_url: "https://junit.org/junit5/"
+      binary_artifact:
+        url: "file:/home/nino/.m2/repository/org/junit/junit-bom/5.10.1/junit-bom-5.10.1.pom"
+        hash:
+          value: "41a86ea51227739a5b7ca3430ae88ce44a64a42a"
+          algorithm: "SHA-1"
+      source_artifact:
+        url: "file:/home/nino/.m2/repository/org/junit/junit-bom/5.10.1/junit-bom-5.10.1.pom"
+        hash:
+          value: "41a86ea51227739a5b7ca3430ae88ce44a64a42a"
+          algorithm: "SHA-1"
+      vcs:
+        type: "Git"
+        url: "git://github.com/junit-team/junit5.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/junit-team/junit5.git"
+        revision: ""
+        path: ""
+      is_metadata_only: true
+    - id: "Maven:org.junit.jupiter:junit-jupiter-api:5.10.1"
+      purl: "pkg:maven/org.junit.jupiter/junit-jupiter-api@5.10.1"
+      authors:
+      - "Christian Stein"
+      - "Johannes Link"
+      - "Juliette de Rancourt"
+      - "Marc Philipp"
+      - "Matthias Merdes"
+      - "Sam Brannen"
+      - "Stefan Bechtold"
+      declared_licenses:
+      - "Eclipse Public License v2.0"
+      declared_licenses_processed:
+        spdx_expression: "EPL-2.0"
+        mapped:
+          Eclipse Public License v2.0: "EPL-2.0"
+      description: "Module \"junit-jupiter-api\" of JUnit 5."
+      homepage_url: "https://junit.org/junit5/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "git://github.com/junit-team/junit5.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/junit-team/junit5.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.junit.platform:junit-platform-commons:1.10.1"
+      purl: "pkg:maven/org.junit.platform/junit-platform-commons@1.10.1"
+      authors:
+      - "Christian Stein"
+      - "Johannes Link"
+      - "Juliette de Rancourt"
+      - "Marc Philipp"
+      - "Matthias Merdes"
+      - "Sam Brannen"
+      - "Stefan Bechtold"
+      declared_licenses:
+      - "Eclipse Public License v2.0"
+      declared_licenses_processed:
+        spdx_expression: "EPL-2.0"
+        mapped:
+          Eclipse Public License v2.0: "EPL-2.0"
+      description: "Module \"junit-platform-commons\" of JUnit 5."
+      homepage_url: "https://junit.org/junit5/"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "git://github.com/junit-team/junit5.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/junit-team/junit5.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.opentest4j:opentest4j:1.3.0"
+      purl: "pkg:maven/org.opentest4j/opentest4j@1.3.0"
+      authors:
+      - "Johannes Link"
+      - "Marc Philipp"
+      - "Matthias Merdes"
+      - "Sam Brannen"
+      - "Stefan Bechtold"
+      declared_licenses:
+      - "The Apache License, Version 2.0"
+      declared_licenses_processed:
+        spdx_expression: "Apache-2.0"
+        mapped:
+          The Apache License, Version 2.0: "Apache-2.0"
+      description: "Open Test Alliance for the JVM"
+      homepage_url: "https://github.com/ota4j-team/opentest4j"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "git://github.com/ota4j-team/opentest4j.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/ota4j-team/opentest4j.git"
+        revision: ""
+        path: ""
+    - id: "Maven:org.slf4j:slf4j-api:2.0.18"
+      purl: "pkg:maven/org.slf4j/slf4j-api@2.0.18"
+      authors:
+      - "Ceki Gulcu"
+      - "QOS.ch"
+      declared_licenses:
+      - "MIT"
+      declared_licenses_processed:
+        spdx_expression: "MIT"
+      description: "The slf4j API"
+      homepage_url: "http://www.slf4j.org"
+      binary_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/slf4j/slf4j-api/2.0.18/slf4j-api-2.0.18.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: "https://artifactory.example.com/artifactory/maven-central-remote/org/slf4j/slf4j-api/2.0.18/slf4j-api-2.0.18-sources.jar"
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/qos-ch/slf4j.git"
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/qos-ch/slf4j.git"
+        revision: ""
+        path: ""
+    dependency_graphs:
+      GradleInspector:
+        packages:
+        - "Gradle:Sample_Project:utils:"
+        - "Maven:com.google.code.gson:gson:2.11.0"
+        - "Maven:com.google.errorprone:error_prone_annotations:2.27.0"
+        - "Maven:io.github.java-diff-utils:java-diff-utils:4.12"
+        - "Maven:io.ktor:ktor-client-core-jvm:3.5.0"
+        - "Maven:io.ktor:ktor-client-core:3.5.0"
+        - "Maven:io.ktor:ktor-events-jvm:3.5.0"
+        - "Maven:io.ktor:ktor-events:3.5.0"
+        - "Maven:io.ktor:ktor-http-cio-jvm:3.5.0"
+        - "Maven:io.ktor:ktor-http-cio:3.5.0"
+        - "Maven:io.ktor:ktor-http-jvm:3.5.0"
+        - "Maven:io.ktor:ktor-http:3.5.0"
+        - "Maven:io.ktor:ktor-io-jvm:3.5.0"
+        - "Maven:io.ktor:ktor-io:3.5.0"
+        - "Maven:io.ktor:ktor-network-jvm:3.5.0"
+        - "Maven:io.ktor:ktor-network:3.5.0"
+        - "Maven:io.ktor:ktor-serialization-jvm:3.5.0"
+        - "Maven:io.ktor:ktor-serialization:3.5.0"
+        - "Maven:io.ktor:ktor-sse-jvm:3.5.0"
+        - "Maven:io.ktor:ktor-sse:3.5.0"
+        - "Maven:io.ktor:ktor-utils-jvm:3.5.0"
+        - "Maven:io.ktor:ktor-utils:3.5.0"
+        - "Maven:io.ktor:ktor-websocket-serialization-jvm:3.5.0"
+        - "Maven:io.ktor:ktor-websocket-serialization:3.5.0"
+        - "Maven:io.ktor:ktor-websockets-jvm:3.5.0"
+        - "Maven:io.ktor:ktor-websockets:3.5.0"
+        - "Maven:org.apiguardian:apiguardian-api:1.1.2"
+        - "Maven:org.jetbrains.kotlin:abi-tools-api:2.3.20"
+        - "Maven:org.jetbrains.kotlin:abi-tools-api:2.3.21"
+        - "Maven:org.jetbrains.kotlin:abi-tools:2.3.20"
+        - "Maven:org.jetbrains.kotlin:abi-tools:2.3.21"
+        - "Maven:org.jetbrains.kotlin:fus-statistics-gradle-plugin:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-assignment-compiler-plugin-embeddable:2.3.20"
+        - "Maven:org.jetbrains.kotlin:kotlin-build-statistics:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-build-tools-api:2.3.20"
+        - "Maven:org.jetbrains.kotlin:kotlin-build-tools-api:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-build-tools-compat:2.3.20"
+        - "Maven:org.jetbrains.kotlin:kotlin-build-tools-compat:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-build-tools-cri-impl:2.3.20"
+        - "Maven:org.jetbrains.kotlin:kotlin-build-tools-cri-impl:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-build-tools-impl:2.3.20"
+        - "Maven:org.jetbrains.kotlin:kotlin-build-tools-impl:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-compiler-embeddable:2.3.20"
+        - "Maven:org.jetbrains.kotlin:kotlin-compiler-embeddable:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-compiler-runner:2.3.20"
+        - "Maven:org.jetbrains.kotlin:kotlin-compiler-runner:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-daemon-client:2.3.20"
+        - "Maven:org.jetbrains.kotlin:kotlin-daemon-client:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-daemon-embeddable:2.3.20"
+        - "Maven:org.jetbrains.kotlin:kotlin-daemon-embeddable:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-gradle-plugin-annotations:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-gradle-plugin-api:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-gradle-plugin-idea-proto:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-gradle-plugin-idea:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-gradle-plugin:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-gradle-plugins-bom:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-klib-abi-reader:2.3.20"
+        - "Maven:org.jetbrains.kotlin:kotlin-klib-abi-reader:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-klib-commonizer-api:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-klib-commonizer-embeddable:2.3.20"
+        - "Maven:org.jetbrains.kotlin:kotlin-klib-commonizer-embeddable:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-metadata-jvm:2.3.20"
+        - "Maven:org.jetbrains.kotlin:kotlin-metadata-jvm:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-native-utils:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-reflect:1.6.10"
+        - "Maven:org.jetbrains.kotlin:kotlin-reflect:2.3.20"
+        - "Maven:org.jetbrains.kotlin:kotlin-sam-with-receiver-compiler-plugin-embeddable:2.3.20"
+        - "Maven:org.jetbrains.kotlin:kotlin-script-runtime:2.3.20"
+        - "Maven:org.jetbrains.kotlin:kotlin-script-runtime:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-scripting-common:2.3.20"
+        - "Maven:org.jetbrains.kotlin:kotlin-scripting-common:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:2.3.20"
+        - "Maven:org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable:2.3.20"
+        - "Maven:org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-scripting-jvm:2.3.20"
+        - "Maven:org.jetbrains.kotlin:kotlin-scripting-jvm:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-serialization-compiler-plugin-embeddable:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-stdlib:2.3.20"
+        - "Maven:org.jetbrains.kotlin:kotlin-stdlib:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-test-junit5:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-test:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-tooling-core:2.3.20"
+        - "Maven:org.jetbrains.kotlin:kotlin-tooling-core:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-util-io:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-util-klib-metadata:2.3.21"
+        - "Maven:org.jetbrains.kotlin:kotlin-util-klib:2.3.21"
+        - "Maven:org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.11.0"
+        - "Maven:org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.11.0"
+        - "Maven:org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.0"
+        - "Maven:org.jetbrains.kotlinx:kotlinx-coroutines-core:1.11.0"
+        - "Maven:org.jetbrains.kotlinx:kotlinx-datetime-jvm:0.7.1"
+        - "Maven:org.jetbrains.kotlinx:kotlinx-datetime:0.7.1"
+        - "Maven:org.jetbrains.kotlinx:kotlinx-io-bytestring-jvm:0.9.0"
+        - "Maven:org.jetbrains.kotlinx:kotlinx-io-bytestring:0.9.0"
+        - "Maven:org.jetbrains.kotlinx:kotlinx-io-core-jvm:0.9.0"
+        - "Maven:org.jetbrains.kotlinx:kotlinx-io-core:0.9.0"
+        - "Maven:org.jetbrains.kotlinx:kotlinx-serialization-bom:1.11.0"
+        - "Maven:org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.11.0"
+        - "Maven:org.jetbrains.kotlinx:kotlinx-serialization-core:1.11.0"
+        - "Maven:org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.11.0"
+        - "Maven:org.jetbrains.kotlinx:kotlinx-serialization-json:1.11.0"
+        - "Maven:org.jetbrains:annotations:13.0"
+        - "Maven:org.jetbrains:annotations:23.0.0"
+        - "Maven:org.junit.jupiter:junit-jupiter-api:5.10.1"
+        - "Maven:org.junit.platform:junit-platform-commons:1.10.1"
+        - "Maven:org.junit:junit-bom:5.10.1"
+        - "Maven:org.opentest4j:opentest4j:1.3.0"
+        - "Maven:org.slf4j:slf4j-api:2.0.18"
+        scopes:
+          :buildSrc::compileClasspath:
+          - root: 54
+          - root: 65
+          - root: 78
+          :buildSrc::compilePluginsBlocksPluginClasspathElements:
+          - root: 71
+          :buildSrc::embeddedKotlin:
+          - root: 65
+          - root: 78
+          :buildSrc::kotlinBuildToolsApiClasspath:
+          - root: 36
+          - root: 40
+          :buildSrc::kotlinCompilerClasspath:
+          - root: 36
+          - root: 40
+          :buildSrc::kotlinCompilerPluginClasspathMain:
+          - root: 32
+          - root: 66
+          - root: 71
+          :buildSrc::kotlinCompilerPluginClasspathTest:
+          - root: 32
+          - root: 66
+          - root: 71
+          :buildSrc::kotlinInternalAbiValidation:
+          - root: 29
+          :buildSrc::kotlinKlibCommonizerClasspath:
+          - root: 59
+          :buildSrc::precompiledScriptPluginAccessorsGenerationClasspath:
+          - root: 54
+            fragment: 1
+          - root: 65
+          - root: 78
+          :buildSrc::runtimeClasspath:
+          - root: 54
+            fragment: 1
+          :buildSrc::testCompileClasspath:
+          - root: 54
+          - root: 65
+          - root: 78
+          :buildSrc::testRuntimeClasspath:
+          - root: 54
+            fragment: 1
+          - root: 65
+          - root: 78
+          Sample_Project:app::compileClasspath:
+          - root: 0
+          - root: 79
+          Sample_Project:app::kotlinBuildToolsApiClasspath:
+          - root: 37
+          - root: 41
+          Sample_Project:app::kotlinCompilerClasspath:
+          - root: 37
+          - root: 41
+          Sample_Project:app::kotlinCompilerPluginClasspathMain:
+          - root: 72
+          Sample_Project:app::kotlinCompilerPluginClasspathTest:
+          - root: 72
+          Sample_Project:app::kotlinInternalAbiValidation:
+          - root: 30
+          Sample_Project:app::kotlinKlibCommonizerClasspath:
+          - root: 60
+          Sample_Project:app::runtimeClasspath:
+          - root: 0
+            fragment: 1
+          - root: 79
+          Sample_Project:app::testCompileClasspath:
+          - root: 0
+          - root: 5
+          - root: 79
+          Sample_Project:app::testRuntimeClasspath:
+          - root: 0
+            fragment: 1
+          - root: 5
+          - root: 79
+          Sample_Project:utils::compileClasspath:
+          - root: 5
+          - root: 79
+          - root: 90
+          - root: 92
+          - root: 101
+          Sample_Project:utils::kotlinBuildToolsApiClasspath:
+          - root: 37
+          - root: 41
+          Sample_Project:utils::kotlinCompilerClasspath:
+          - root: 37
+          - root: 41
+          Sample_Project:utils::kotlinCompilerPluginClasspathMain:
+          - root: 72
+          - root: 77
+          Sample_Project:utils::kotlinCompilerPluginClasspathTest:
+          - root: 72
+          - root: 77
+          Sample_Project:utils::kotlinInternalAbiValidation:
+          - root: 30
+          Sample_Project:utils::kotlinKlibCommonizerClasspath:
+          - root: 60
+          Sample_Project:utils::runtimeClasspath:
+          - root: 5
+          - root: 79
+          - root: 90
+          - root: 92
+          - root: 101
+          Sample_Project:utils::testCompileClasspath:
+          - root: 5
+          - root: 79
+          - root: 81
+          - root: 81
+          - root: 90
+          - root: 92
+          - root: 101
+          Sample_Project:utils::testRuntimeClasspath:
+          - root: 5
+          - root: 79
+          - root: 81
+          - root: 81
+          - root: 90
+          - root: 92
+          - root: 101
+        nodes:
+        - pkg: 102
+        - pkg: 78
+        - pkg: 65
+        - pkg: 55
+        - pkg: 50
+        - pkg: 84
+        - pkg: 63
+        - pkg: 83
+        - pkg: 35
+        - pkg: 51
+        - pkg: 31
+        - pkg: 54
+        - pkg: 69
+        - pkg: 67
+        - pkg: 75
+        - pkg: 73
+        - pkg: 71
+        - pkg: 82
+        - pkg: 36
+        - pkg: 34
+        - pkg: 38
+        - pkg: 64
+        - pkg: 48
+        - pkg: 89
+        - pkg: 42
+        - pkg: 46
+        - pkg: 44
+        - pkg: 40
+        - pkg: 66
+        - pkg: 32
+        - pkg: 27
+        - pkg: 61
+        - pkg: 56
+        - pkg: 3
+        - pkg: 29
+        - pkg: 59
+        - pkg: 53
+        - pkg: 52
+        - pkg: 86
+        - pkg: 63
+          fragment: 1
+        - pkg: 58
+        - pkg: 2
+        - pkg: 1
+        - pkg: 33
+        - pkg: 85
+        - pkg: 28
+        - pkg: 47
+        - pkg: 45
+        - pkg: 54
+          fragment: 1
+        - pkg: 103
+        - pkg: 79
+        - pkg: 108
+        - pkg: 87
+        - pkg: 88
+        - pkg: 90
+        - pkg: 93
+        - pkg: 94
+        - pkg: 95
+        - pkg: 96
+        - pkg: 12
+        - pkg: 13
+        - pkg: 97
+        - pkg: 98
+        - pkg: 99
+        - pkg: 20
+        - pkg: 21
+        - pkg: 10
+        - pkg: 11
+        - pkg: 14
+        - pkg: 15
+        - pkg: 8
+        - pkg: 9
+        - pkg: 6
+        - pkg: 7
+        - pkg: 24
+        - pkg: 25
+        - pkg: 16
+        - pkg: 17
+        - pkg: 22
+        - pkg: 23
+        - pkg: 18
+        - pkg: 19
+        - pkg: 4
+        - pkg: 5
+        - linkage: "PROJECT_DYNAMIC"
+        - pkg: 37
+        - pkg: 79
+          fragment: 1
+        - pkg: 39
+        - pkg: 68
+        - pkg: 49
+        - pkg: 43
+        - pkg: 47
+          fragment: 1
+        - pkg: 45
+          fragment: 1
+        - pkg: 41
+        - pkg: 70
+        - pkg: 76
+        - pkg: 74
+        - pkg: 72
+        - pkg: 62
+        - pkg: 57
+        - pkg: 30
+        - pkg: 60
+        - pkg: 91
+        - pkg: 92
+        - pkg: 100
+        - pkg: 101
+        - fragment: 1
+          linkage: "PROJECT_DYNAMIC"
+        - pkg: 77
+        - pkg: 106
+        - pkg: 107
+        - pkg: 26
+        - pkg: 105
+        - pkg: 104
+        - pkg: 80
+        - pkg: 81
+        edges:
+        - from: 1
+          to: 0
+        - from: 2
+          to: 1
+        - from: 6
+          to: 5
+        - from: 9
+          to: 3
+        - from: 9
+          to: 4
+        - from: 9
+          to: 6
+        - from: 9
+          to: 7
+        - from: 9
+          to: 8
+        - from: 10
+          to: 9
+        - from: 11
+          to: 3
+        - from: 11
+          to: 9
+        - from: 11
+          to: 10
+        - from: 12
+          to: 1
+        - from: 14
+          to: 1
+        - from: 14
+          to: 12
+        - from: 14
+          to: 13
+        - from: 15
+          to: 1
+        - from: 15
+          to: 12
+        - from: 15
+          to: 14
+        - from: 16
+          to: 1
+        - from: 16
+          to: 12
+        - from: 16
+          to: 14
+        - from: 16
+          to: 15
+        - from: 18
+          to: 17
+        - from: 20
+          to: 1
+        - from: 20
+          to: 19
+        - from: 24
+          to: 1
+        - from: 24
+          to: 13
+        - from: 24
+          to: 21
+        - from: 24
+          to: 22
+        - from: 24
+          to: 23
+        - from: 25
+          to: 1
+        - from: 26
+          to: 23
+        - from: 26
+          to: 24
+        - from: 26
+          to: 25
+        - from: 27
+          to: 1
+        - from: 27
+          to: 19
+        - from: 27
+          to: 20
+        - from: 27
+          to: 24
+        - from: 27
+          to: 26
+        - from: 31
+          to: 1
+        - from: 32
+          to: 1
+        - from: 34
+          to: 1
+        - from: 34
+          to: 30
+        - from: 34
+          to: 31
+        - from: 34
+          to: 32
+        - from: 34
+          to: 33
+        - from: 35
+          to: 1
+        - from: 35
+          to: 24
+        - from: 36
+          to: 4
+        - from: 36
+          to: 7
+        - from: 37
+          to: 7
+        - from: 37
+          to: 36
+        - from: 38
+          to: 5
+        - from: 39
+          to: 5
+        - from: 39
+          to: 38
+        - from: 40
+          to: 39
+        - from: 42
+          to: 41
+        - from: 43
+          to: 8
+        - from: 43
+          to: 42
+        - from: 44
+          to: 5
+        - from: 44
+          to: 38
+        - from: 47
+          to: 23
+        - from: 47
+          to: 46
+        - from: 48
+          to: 3
+        - from: 48
+          to: 9
+        - from: 48
+          to: 10
+        - from: 48
+          to: 36
+        - from: 48
+          to: 37
+        - from: 48
+          to: 40
+        - from: 48
+          to: 43
+        - from: 48
+          to: 44
+        - from: 48
+          to: 45
+        - from: 48
+          to: 47
+        - from: 50
+          to: 49
+        - from: 53
+          to: 49
+        - from: 53
+          to: 50
+        - from: 53
+          to: 52
+        - from: 54
+          to: 53
+        - from: 55
+          to: 50
+        - from: 56
+          to: 55
+        - from: 57
+          to: 50
+        - from: 57
+          to: 56
+        - from: 58
+          to: 57
+        - from: 59
+          to: 50
+        - from: 59
+          to: 51
+        - from: 59
+          to: 54
+        - from: 59
+          to: 58
+        - from: 60
+          to: 59
+        - from: 62
+          to: 50
+        - from: 62
+          to: 61
+        - from: 63
+          to: 62
+        - from: 64
+          to: 50
+        - from: 64
+          to: 51
+        - from: 64
+          to: 54
+        - from: 64
+          to: 60
+        - from: 64
+          to: 63
+        - from: 65
+          to: 64
+        - from: 66
+          to: 50
+        - from: 66
+          to: 51
+        - from: 66
+          to: 54
+        - from: 66
+          to: 63
+        - from: 66
+          to: 65
+        - from: 67
+          to: 66
+        - from: 68
+          to: 50
+        - from: 68
+          to: 51
+        - from: 68
+          to: 54
+        - from: 68
+          to: 65
+        - from: 69
+          to: 68
+        - from: 70
+          to: 50
+        - from: 70
+          to: 51
+        - from: 70
+          to: 54
+        - from: 70
+          to: 60
+        - from: 70
+          to: 67
+        - from: 70
+          to: 69
+        - from: 71
+          to: 70
+        - from: 72
+          to: 50
+        - from: 72
+          to: 51
+        - from: 72
+          to: 54
+        - from: 72
+          to: 65
+        - from: 73
+          to: 72
+        - from: 74
+          to: 50
+        - from: 74
+          to: 51
+        - from: 74
+          to: 54
+        - from: 74
+          to: 65
+        - from: 74
+          to: 67
+        - from: 75
+          to: 74
+        - from: 76
+          to: 50
+        - from: 76
+          to: 51
+        - from: 76
+          to: 54
+        - from: 76
+          to: 75
+        - from: 77
+          to: 76
+        - from: 78
+          to: 50
+        - from: 78
+          to: 51
+        - from: 78
+          to: 54
+        - from: 78
+          to: 77
+        - from: 79
+          to: 78
+        - from: 80
+          to: 50
+        - from: 80
+          to: 51
+        - from: 80
+          to: 54
+        - from: 80
+          to: 65
+        - from: 81
+          to: 80
+        - from: 82
+          to: 50
+        - from: 82
+          to: 51
+        - from: 82
+          to: 54
+        - from: 82
+          to: 67
+        - from: 82
+          to: 71
+        - from: 82
+          to: 73
+        - from: 82
+          to: 79
+        - from: 82
+          to: 81
+        - from: 83
+          to: 82
+        - from: 84
+          to: 50
+        - from: 84
+          to: 83
+        - from: 85
+          to: 7
+        - from: 86
+          to: 0
+        - from: 87
+          to: 8
+        - from: 87
+          to: 86
+        - from: 90
+          to: 21
+        - from: 90
+          to: 23
+        - from: 90
+          to: 86
+        - from: 90
+          to: 88
+        - from: 90
+          to: 89
+        - from: 91
+          to: 86
+        - from: 92
+          to: 23
+        - from: 92
+          to: 90
+        - from: 92
+          to: 91
+        - from: 93
+          to: 8
+        - from: 93
+          to: 86
+        - from: 93
+          to: 87
+        - from: 93
+          to: 90
+        - from: 93
+          to: 92
+        - from: 94
+          to: 86
+        - from: 95
+          to: 86
+        - from: 95
+          to: 88
+        - from: 95
+          to: 94
+        - from: 96
+          to: 86
+        - from: 96
+          to: 94
+        - from: 96
+          to: 95
+        - from: 97
+          to: 86
+        - from: 97
+          to: 94
+        - from: 97
+          to: 95
+        - from: 97
+          to: 96
+        - from: 98
+          to: 86
+        - from: 99
+          to: 86
+        - from: 100
+          to: 33
+        - from: 100
+          to: 45
+        - from: 100
+          to: 86
+        - from: 100
+          to: 98
+        - from: 100
+          to: 99
+        - from: 101
+          to: 86
+        - from: 101
+          to: 90
+        - from: 102
+          to: 50
+        - from: 103
+          to: 102
+        - from: 104
+          to: 50
+        - from: 104
+          to: 61
+        - from: 104
+          to: 63
+        - from: 105
+          to: 104
+        - from: 106
+          to: 50
+        - from: 106
+          to: 54
+        - from: 106
+          to: 83
+        - from: 106
+          to: 103
+        - from: 106
+          to: 105
+        - from: 111
+          to: 108
+        - from: 111
+          to: 110
+        - from: 112
+          to: 108
+        - from: 112
+          to: 109
+        - from: 112
+          to: 110
+        - from: 112
+          to: 111
+        - from: 113
+          to: 112
+        - from: 114
+          to: 50
+        - from: 114
+          to: 113
+scanner: null
+advisor: null
+evaluator: null
+resolved_configuration:
+  package_curations:
+  - provider:
+      id: "DefaultDir"
+    curations: []
+  - provider:
+      id: "DefaultFile"
+    curations: []
+  - provider:
+      id: "Spring"
+    curations: []
